@@ -13,7 +13,7 @@ A React-based news application that fetches news articles from various categorie
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ro706/myReactApp.git
+   git clone https://github.com/Ro706/SudoNewsApp.git
    cd myReactApp
    ```
 
