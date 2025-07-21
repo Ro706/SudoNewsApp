@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavBar from './component/Navbar';
 import News from './component/News';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
@@ -7,7 +7,13 @@ import LoadingBar from 'react-top-loading-bar';
 const App = () => {
   const pageSize = 5;
   const apiKey = process.env.REACT_APP_NEWS_API;
-  // const apiKey = "031dba381adc4e37892b9df1da4ebcb8"
+  if (!apiKey) {
+    console.error('API key is not set. Please check your .env file.');
+  }
+  // State for loading progress
+  // ✅ Use a state variable to manage loading progress
+  // ✅ Initialize with a default value
+
   const [progress, setProgress] = useState(0);
 
   return (
