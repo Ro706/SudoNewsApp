@@ -22,7 +22,7 @@ const News = (props) => {
   const updateNews = useCallback(async () => {
     try {
       setProgress(10);
-      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+      const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&category=${category}&page=${page}&pageSize=${pageSize}`;
       setLoading(true);
 
       const data = await fetch(url);
